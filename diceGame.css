@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rouge+Script&display=swap');
+
+
+:root{
+    --main-font: "Rouge Script", cursive;
+    --border:1px solid rgb(147, 232, 147);
+}
+
+h1{
+    font-family: var(--main-font);
+    font-size: 8rem;
+    color: #9ABF80;
+}
+
+p{
+    font-family: var(--main-font);
+    color: #E5E3D4;
+    font-size: 3em;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+    background-color: #1C325B;
+}
+
+#dice-icon{
+    margin-top: 1em;
+    width: 10em;
+    height: auto;
+    margin-bottom: -5em;
+    animation: hover 5s ease-in-out infinite;
+
+}
+
+@keyframes hover{
+    0%{
+        transform: translateY(0em);
+    }
+
+    50%{
+        transform: translateY(1em);
+    }
+
+    100%{
+        transform: translateY(0em);
+    }
+}
+
+button{
+    margin-top: 2em;
+    width: 5em;
+    height: 5em;
+    border-radius: 50px;
+    font-size: 1rem;
+    border-style: none;
+    background-color: #6A669D;
+    color: white;
+    font-weight: 900;
+    transition: transform 150ms ease-out;
+}
+
+button:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+button:active{
+    transform: scale(0.9) rotate(360deg)
+}
+
+
+#dice-game-section{
+    width: 80%;
+    margin-top: -3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5em;
+}
+
+
+#player1, #player2{
+    display: flex;
+    flex-direction: column;
+}
+
+#player1 > img, #player2 > img{
+    width: 9em;
+    height: 9em;
+}
+
+.dice1Animation{
+    animation: xAxis1 2100ms forwards;
+}
+
+.dice2Animation{
+    animation: xAxis2 2350ms forwards;
+}
+
+
+/* DICE ANIMATAION */
+
+@keyframes xAxis1{
+    0%{
+        animation-timing-function: cubic-bezier(1,.1,.68,.96);
+        transform: translateX(-700px) translateY(-540px) rotateZ(-360deg);
+
+    }
+
+    60%{
+        transform: translateX(-300px) translateY(0px) rotateZ(-180deg);
+    }
+
+    70%{
+        transform: translateX(-150px) translateY(-90px) rotateZ(-90deg);
+    }
+
+    80%{
+        transform: translateX(-60px) translateY(0px) rotateZ(-45deg);
+    }
+
+    90%{
+        transform: translateX(20px) translateY(0px) rotateZ(0deg);
+    }
+
+    93%{
+        transform: translateX(40px) translateY(10px) rotateZ(30deg);
+    }
+
+    95%{
+        transform: translateX(40px) translateY(-25px) rotateZ(10deg);
+    }
+
+    100%{
+        transform: translateX(0px) translateY(0px) rotateZ(0deg);
+    }
+}
+
+@keyframes xAxis2 {
+    0% {
+        animation-timing-function: cubic-bezier(1,.1,.75,.90);
+        transform: translateX(650px) translateY(-600px) rotateZ(360deg);
+    }
+
+    60% {
+        transform: translateX(269px) translateY(0px) rotateZ(160deg);
+    }
+
+    70% {
+        transform: translateX(120px) translateY(-90px) rotateZ(90deg);
+    }
+
+    80% {
+        transform: translateX(80px) translateY(0px) rotateZ(45deg);
+    }
+
+    90% {
+        transform: translateX(-20px) translateY(0px) rotateZ(0deg);
+    }
+
+    93% {
+        transform: translateX(-40px) translateY(10px) rotateZ(-23deg);
+    }
+
+    95% {
+        transform: translateX(-40px) translateY(-25px) rotateZ(-10deg);
+    }
+
+    100% {
+        transform: translateX(0px) translateY(0px) rotateZ(0deg);
+    }
+}
+
+
